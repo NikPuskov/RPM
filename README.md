@@ -5,7 +5,7 @@
 Установим пакеты `yum install -y wget rpmdevtools rpm-build createrepo \
  yum-utils cmake gcc git nano`
 
-I) Соберем пакет Nginx:
+I) Соберем пакет Nginx с дополнительным модулем ngx_brotli:
 
 1. Скачиваем SRPM пакет Nginx
 
@@ -78,7 +78,7 @@ https://github.com/google/ngx_brotli`
 
 
 
-II) Создадим свой репозиторий и разместим там ранее собранный RPM
+II) Создадим свой репозиторий и разместим там ранее собранный RPM:
 
 1. Создадим каталог repo
 

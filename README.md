@@ -75,3 +75,52 @@ https://github.com/google/ngx_brotli`
 `systemctl status nginx`
 
 ![Image alt](https://github.com/NikPuskov/RPM/blob/main/rpm3.jpg)
+
+
+
+Создадим свой репозиторий и разместим там ранее собранный RPM
+
+1. Создадим каталог repo
+
+`mkdir /usr/share/nginx/html/repo`
+
+2. Копируем туда наши собранные RPM-пакеты
+
+`cp ~/rpmbuild/RPMS/x86_64/*.rpm /usr/share/nginx/html/repo/`
+
+3. Инициализируем репозиторий
+
+`createrepo /usr/share/nginx/html/repo/`
+
+4. В файле /etc/nginx/nginx.conf в блоке server добавим следующие директивы
+
+`index index.html index.htm;`
+
+`autoindex on;`
+
+5. Проверяем синтаксис и перезапускаем Nпginx
+
+`nginx -t`
+
+`nginx -s reload`
+
+6. Проверяем
+
+`curl -a http://localhost/repo/`
+
+7. Добавим репозиторий в /etc/yum.repos.d
+
+`cat >> /etc/yum.repos.d/otus.repo << EOF`
+
+[otus]
+name=otus-linux
+baseurl=http://localhost/repo
+gpgcheck=0
+enabled=1
+EOF
+
+8. Проверяем что репозиторий подключился и посмотрим, что в нем есть
+
+`yum repolist enabled | grep otus`
+
+

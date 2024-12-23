@@ -112,12 +112,17 @@ https://github.com/google/ngx_brotli`
 
 `cat >> /etc/yum.repos.d/otus.repo << EOF`
 
-[otus]
-name=otus-linux
-baseurl=http://localhost/repo
-gpgcheck=0
-enabled=1
-EOF
+`[otus]`
+
+`name=otus-linux`
+
+`baseurl=http://localhost/repo`
+
+`gpgcheck=0`
+
+`enabled=1`
+
+`EOF`
 
 8. Проверяем что репозиторий подключился и посмотрим, что в нем есть
 

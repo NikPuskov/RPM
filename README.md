@@ -146,6 +146,6 @@ https://github.com/google/ngx_brotli`
 
 `yum install -y percona-release.noarch`
 
+![Image alt](https://github.com/NikPuskov/RPM/blob/main/repo1.jpg)
 
-
-
+![Image alt](https://github.com/NikPuskov/RPM/blob/main/repo2.jpg)

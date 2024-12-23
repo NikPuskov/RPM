@@ -68,7 +68,10 @@ https://github.com/google/ngx_brotli`
 
 `yum localinstall *.rpm`
 
+![Image alt](https://github.com/NikPuskov/RPM/blob/main/rpm2.jpg)
+
 `systemctl start nginx`
 
 `systemctl status nginx`
 
+![Image alt](https://github.com/NikPuskov/RPM/blob/main/rpm3.jpg)

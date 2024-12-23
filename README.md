@@ -128,4 +128,24 @@ https://github.com/google/ngx_brotli`
 
 `yum repolist enabled | grep otus`
 
+9. Добавим пакет в наш репозиторий
+
+`cd /usr/share/nginx/html/repo/`
+
+`wget https://repo.percona.com/yum/percona-release-latest.noarch.rpm`
+
+10. Обновим список пакетов в репозитории (делается при каждом добавлении файлов)
+
+`createrepo /usr/share/nginx/html/repo/`
+
+`yum makecache`
+
+`yum list | grep otus`
+
+11. Установим пакет percona-release
+
+`yum install -y percona-release.noarch`
+
+
+
 

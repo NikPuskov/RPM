@@ -56,6 +56,8 @@ https://github.com/google/ngx_brotli`
 
 `ll /root/rpmbuild/RPMS/x86_64/`
 
+![Image alt](https://github.com/NikPuskov/RPM/blob/main/rpm1.jpg)
+
 8. Копируем пакеты в общий каталог
 
 `cp ~/rpmbuild/RPMS/noarch/* ~/rpmbuild/RPMS/x86_64/`
